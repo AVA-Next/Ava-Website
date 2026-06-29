@@ -32,8 +32,12 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-muted-foreground flex flex-col md:flex-row gap-2 justify-between">
-          <span>© 2026 AVA Next. All rights reserved.</span>
+        <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-muted-foreground flex flex-col md:flex-row gap-4 justify-between items-center">
+          <div className="flex gap-4 items-center">
+            <span>© 2026 AVA Next. All rights reserved.</span>
+            <Link to="/privacy" className="hover:text-foreground transition">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-foreground transition">Terms & Conditions</Link>
+          </div>
           <span>Built for the next era of work.</span>
         </div>
       </div>
