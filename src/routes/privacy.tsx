@@ -57,7 +57,7 @@ function PrivacyPolicyPage() {
 
             <p className="mt-6 text-foreground font-semibold">5. Contact us</p>
             <p className="mt-2">
-              If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:admin@avanext.ai" className="text-white hover:underline transition">admin@avanext.ai</a>.
+              If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:admin@avanext.ai" className="text-accent hover:underline transition">admin@avanext.ai</a>.
             </p>
           </div>
         </Section>

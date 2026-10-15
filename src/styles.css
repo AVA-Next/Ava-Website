@@ -35,61 +35,61 @@
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--accent) 60%, transparent);
-  --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--secondary) 50%, transparent);
+  --shadow-glow: 0 10px 40px -12px color-mix(in oklab, var(--primary) 45%, transparent);
+  --shadow-elegant: 0 20px 60px -24px color-mix(in oklab, var(--foreground) 22%, transparent);
 }
 
 :root {
   --radius: 0.875rem;
 
-  /* Deep Navy base */
-  --background: oklch(0.18 0.04 260);
-  --foreground: oklch(0.98 0.005 250);
+  /* Light base: soft off-white page, white cards, navy text */
+  --background: oklch(0.985 0.005 250);
+  --foreground: oklch(0.24 0.05 262);
 
-  --card: oklch(0.22 0.045 262);
-  --card-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.22 0.045 262);
-  --popover-foreground: oklch(0.98 0.005 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.05 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.05 262);
 
-  /* Electric Blue */
-  --primary: oklch(0.6 0.22 258);
+  /* AVA logo blue */
+  --primary: oklch(0.5 0.15 255);
   --primary-foreground: oklch(0.99 0.005 250);
 
-  --secondary: oklch(0.28 0.05 262);
-  --secondary-foreground: oklch(0.98 0.005 250);
+  --secondary: oklch(0.95 0.015 250);
+  --secondary-foreground: oklch(0.24 0.05 262);
 
-  --muted: oklch(0.26 0.04 262);
-  --muted-foreground: oklch(0.72 0.03 255);
+  --muted: oklch(0.96 0.01 250);
+  --muted-foreground: oklch(0.48 0.03 258);
 
-  /* Cyan accent */
-  --accent: oklch(0.78 0.16 210);
-  --accent-foreground: oklch(0.15 0.04 260);
+  /* AVA logo cyan, deepened enough to read as text on white */
+  --accent: oklch(0.56 0.12 228);
+  --accent-foreground: oklch(0.99 0.005 250);
 
-  --destructive: oklch(0.62 0.22 25);
+  --destructive: oklch(0.58 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.78 0.16 210);
+  --border: oklch(0.24 0.05 262 / 10%);
+  --input: oklch(0.24 0.05 262 / 16%);
+  --ring: oklch(0.56 0.12 228);
 
   --gradient-hero:
     radial-gradient(
       ellipse 80% 60% at 50% -10%,
-      color-mix(in oklab, var(--primary) 35%, transparent),
+      color-mix(in oklab, var(--primary) 14%, transparent),
       transparent 70%
     ),
     radial-gradient(
       ellipse 60% 50% at 80% 20%,
-      color-mix(in oklab, var(--accent) 22%, transparent),
+      color-mix(in oklab, oklch(0.75 0.13 215) 16%, transparent),
       transparent 70%
     ),
-    linear-gradient(180deg, oklch(0.16 0.04 260), oklch(0.18 0.04 260));
-  --gradient-primary: linear-gradient(135deg, oklch(0.6 0.22 258), oklch(0.78 0.16 210));
-  --gradient-text: linear-gradient(135deg, oklch(0.99 0.005 250) 0%, oklch(0.78 0.16 210) 100%);
+    linear-gradient(180deg, oklch(0.97 0.012 250), oklch(0.985 0.005 250));
+  --gradient-primary: linear-gradient(135deg, oklch(0.42 0.13 260), oklch(0.62 0.13 222));
+  --gradient-text: linear-gradient(135deg, oklch(0.3 0.09 262) 0%, oklch(0.5 0.15 255) 45%, oklch(0.62 0.13 222) 100%);
   --gradient-card: linear-gradient(
     180deg,
-    color-mix(in oklab, white 6%, transparent),
-    color-mix(in oklab, white 1%, transparent)
+    color-mix(in oklab, white 92%, transparent),
+    color-mix(in oklab, white 78%, transparent)
   );
 }
 
@@ -120,7 +120,7 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--accent) 40%, transparent);
+    background: color-mix(in oklab, var(--accent) 25%, transparent);
     color: var(--foreground);
   }
 }
@@ -129,18 +129,20 @@
   background: var(--gradient-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid color-mix(in oklab, white 10%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 5%, transparent),
+    0 8px 28px color-mix(in oklab, var(--foreground) 6%, transparent);
 }
 
 @utility glass-strong {
   background: linear-gradient(
     180deg,
-    color-mix(in oklab, white 8%, transparent),
-    color-mix(in oklab, white 2%, transparent)
+    color-mix(in oklab, white 97%, transparent),
+    color-mix(in oklab, white 94%, transparent)
   );
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
-  border: 1px solid color-mix(in oklab, white 12%, transparent);
+  border: 1px solid var(--border);
 }
 
 @utility gradient-text {
@@ -164,8 +166,8 @@
 
 @utility grid-bg {
   background-image:
-    linear-gradient(to right, color-mix(in oklab, white 4%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, white 4%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 30%, transparent 80%);
 }
@@ -215,6 +217,12 @@
 }
 @utility animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* `bg-[var(--gradient-primary)]` compiles to background-color, which can't hold a gradient,
+   so the buttons and logo tiles using it rendered with no fill. Paint the gradient here. */
+.bg-\[var\(--gradient-primary\)\] {
+  background-image: var(--gradient-primary);
 }
 
 .zoho-iframe-shell {

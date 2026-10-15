@@ -51,7 +51,7 @@ function TermsConditionsPage() {
             
             <p className="mt-6 text-foreground font-semibold">6. Contact us</p>
             <p className="mt-2">
-              In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at <a href="mailto:admin@avanext.ai" className="text-white hover:underline transition">admin@avanext.ai</a>.
+              In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at <a href="mailto:admin@avanext.ai" className="text-accent hover:underline transition">admin@avanext.ai</a>.
             </p>
           </div>
         </Section>

@@ -92,7 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "AVA Next — The Future of Intelligent Business Operations" },
       { name: "twitter:description", content: "Intelligent operating platforms that unify CRM, workflow automation, analytics, and AI." },
       { name: "twitter:image", content: "/og-image.png" },
-      { name: "theme-color", content: "#0F172A" },
+      { name: "theme-color", content: "#F7F9FC" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
